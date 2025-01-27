@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb using onclick in js</title>
+</head>
+
+<body style="background-color: lightblue;">
+    <br><br><br>
+    <center>
+        <h1><i><b>Light Bulb</b></i></h1>
+        <div>
+            <div class="bulb" id="bulba"></div>
+            <div class="baseofbulb"></div>
+            <div class="baseofbulb2"></div>
+
+        </div>
+
+
+        <br><br>
+        <button class="btn" onclick="toggleBulb()"><b>ON / OFF BULB</b></button>
+
+    </center>
+
+
+    <style>
+        .bulb {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #f6efef;
+            border: 1px solid black;
+        }
+
+        .baseofbulb {
+            width: 75px;
+            height: 55px;
+            background-color: rgb(22, 12, 63);
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .baseofbulb2 {
+            width: 30px;
+            height: 35px;
+            background-color: rgb(22, 12, 63);
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        
+        // Initialize flag to flase (bulb is off) 
+        let flag = false;
+
+        function toggleBulb() {
+            let bulb = document.getElementById("bulba");
+
+            // toggle the state of the bulb
+            flag = !flag;
+
+            if(flag) {
+                // bulb is on
+                bulb.style.backgroundColor = "yellow";
+                console.log(flag + " bulb is ON");
+            }
+            else{
+                // bulb is off
+                bulb.style.backgroundColor = "#faa";
+                console.log(flag + " bulb is OFF");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
